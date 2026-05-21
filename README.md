@@ -1,1 +1,182 @@
-# site02
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Lucas Emanuel | Site Pessoal</title>
+  <style>
+    /* ===== Tema Tecnologia ===== */
+    :root {
+      --bg: #0b0f1a;
+      --card: #12172a;
+      --primary: #00e5ff;
+      --secondary: #7c7cff;
+      --text: #e8ecf1;
+      --muted: #9aa4b2;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+
+    body {
+      background: radial-gradient(1200px 600px at 10% -10%, #10204a, transparent),
+                  radial-gradient(800px 500px at 90% 10%, #1a0f3d, transparent),
+                  var(--bg);
+      color: var(--text);
+      line-height: 1.6;
+    }
+
+    header {
+      padding: 60px 20px;
+      text-align: center;
+    }
+
+    header h1 {
+      font-size: 2.8rem;
+      color: var(--primary);
+      margin-bottom: 10px;
+    }
+
+    header p {
+      color: var(--muted);
+      font-size: 1.1rem;
+    }
+
+    main {
+      max-width: 800px;
+      margin: auto;
+      padding: 20px;
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+    }
+
+    .card {
+      background: linear-gradient(180deg, rgba(255,255,255,0.04), rgba(255,255,255,0.01));
+      border: 1px solid rgba(255,255,255,0.08);
+      border-radius: 16px;
+      padding: 24px;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.35);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .card:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 20px 40px rgba(0,0,0,0.5);
+    }
+
+    .card h2 {
+      color: var(--secondary);
+      margin-bottom: 12px;
+      font-size: 1.4rem;
+    }
+
+    .card p, .card li {
+      color: var(--text);
+      font-size: 0.95rem;
+    }
+
+    ul {
+      list-style: none;
+    }
+
+    ul li::before {
+      content: "▹";
+      color: var(--primary);
+      margin-right: 8px;
+    }
+
+    footer {
+      text-align: center;
+      padding: 30px 20px;
+      color: var(--muted);
+      font-size: 0.9rem;
+    }
+
+    .tag {
+      display: inline-block;
+      padding: 6px 10px;
+      border-radius: 999px;
+      background: rgba(0,229,255,0.15);
+      color: var(--primary);
+      font-size: 0.8rem;
+      margin: 4px 4px 0 0;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Lucas Emanuel</h1>
+    <p>Estudante | Tecnologia | Programação</p>
+  </header>
+
+  <main>
+    <section class="card">
+      <h2>👤 Sobre mim</h2>
+      <p>
+        Sou um estudante interessado em tecnologia, informática e no funcionamento
+        dos computadores e da internet. Gosto de aprender como sistemas funcionam
+        e de criar projetos usando programação.
+      </p>
+    </section>
+
+    <section class="card">
+      <h2>💻 Habilidades</h2>
+      <span class="tag">HTML</span>
+      <span class="tag">Lógica de Programação</span>
+      <span class="tag">Redes (básico)</span>
+      <span class="tag">Informática</span>
+    </section>
+
+    <section class="card">
+      <h2>🚀 Interesses</h2>
+      <ul>
+        <li>Desenvolvimento Web</li>
+        <li>Segurança da Informação</li>
+        <li>Redes de Computadores</li>
+        <li>Inteligência Artificial</li>
+      </ul>
+    </section>
+
+    <section class="card">
+      <h2>📚 Objetivos</h2>
+      <p>
+        Aprofundar meus conhecimentos em tecnologia, aprender novas linguagens
+        de programação e me preparar para talve entrar em uma carreira na área de TI.
+      </p>
+    </section>
+
+    <section class="card">
+      <h2>🛠️ Projetos</h2>
+      <p>
+        Sou fundador do site de minha sala, está disponivel do endereço CTRLTIF.SHOP
+      </p>
+    </section>
+
+    <section class="card">
+      <h2>🎓 Formação / Estudos</h2>
+      <p>
+        Atualmente estudo de Instituto federeral do Maranhão, sou formado em informatica avançada juntamente com montagem de computadores
+      </p>
+    </section>
+
+    <section class="card">
+      <h2>📞 (99)98506-8012</h2>
+      <p>
+        lucenaemanuel@acad.ifma.edu
+      </p>
+    </section>
+
+  </main>
+
+  <footer>
+    © 2026 • Site pessoal • Tema Tecnologia
+  </footer>
+
+</body>
+</html>
