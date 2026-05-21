@@ -2,180 +2,265 @@
 <html lang="pt-BR">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Lucas Emanuel | Site Pessoal</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Raízes Indígenas Bacabalenses</title>
+
   <style>
-    /* ===== Tema Tecnologia ===== */
-    :root {
-      --bg: #0b0f1a;
-      --card: #12172a;
-      --primary: #00e5ff;
-      --secondary: #7c7cff;
-      --text: #e8ecf1;
-      --muted: #9aa4b2;
+    *{
+      margin:0;
+      padding:0;
+      box-sizing:border-box;
+      font-family: Arial, Helvetica, sans-serif;
     }
 
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    body{
+      background: linear-gradient(to bottom, #1f3b2d, #3f6b4f);
+      color:white;
+      overflow-x:hidden;
     }
 
-    body {
-      background: radial-gradient(1200px 600px at 10% -10%, #10204a, transparent),
-                  radial-gradient(800px 500px at 90% 10%, #1a0f3d, transparent),
-                  var(--bg);
-      color: var(--text);
-      line-height: 1.6;
+    header{
+      height:100vh;
+      display:flex;
+      flex-direction:column;
+      justify-content:center;
+      align-items:center;
+      text-align:center;
+      padding:20px;
+      background:
+        linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)),
+        url('https://images.unsplash.com/photo-1511497584788-876760111969?auto=format&fit=crop&w=1400&q=80');
+      background-size:cover;
+      background-position:center;
     }
 
-    header {
-      padding: 60px 20px;
-      text-align: center;
+    header h1{
+      font-size:4rem;
+      margin-bottom:20px;
+      animation: fadeDown 1.5s ease;
     }
 
-    header h1 {
-      font-size: 2.8rem;
-      color: var(--primary);
-      margin-bottom: 10px;
+    header p{
+      font-size:1.4rem;
+      max-width:900px;
+      line-height:1.6;
+      animation: fadeUp 1.5s ease;
     }
 
-    header p {
-      color: var(--muted);
-      font-size: 1.1rem;
+    section{
+      padding:80px 10%;
     }
 
-    main {
-      max-width: 800px;
-      margin: auto;
-      padding: 20px;
-      display: flex;
-      flex-direction: column;
-      gap: 20px;
+    .card{
+      background: rgba(255,255,255,0.08);
+      border-radius:20px;
+      padding:30px;
+      margin-bottom:40px;
+      backdrop-filter: blur(8px);
+      transition:0.4s;
+      border:1px solid rgba(255,255,255,0.15);
     }
 
-    .card {
-      background: linear-gradient(180deg, rgba(255,255,255,0.04), rgba(255,255,255,0.01));
-      border: 1px solid rgba(255,255,255,0.08);
-      border-radius: 16px;
-      padding: 24px;
-      box-shadow: 0 10px 30px rgba(0,0,0,0.35);
-      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    .card:hover{
+      transform:translateY(-8px);
+      box-shadow:0 10px 25px rgba(0,0,0,0.4);
     }
 
-    .card:hover {
-      transform: translateY(-6px);
-      box-shadow: 0 20px 40px rgba(0,0,0,0.5);
+    h2{
+      color:#ffd27f;
+      margin-bottom:20px;
+      font-size:2rem;
     }
 
-    .card h2 {
-      color: var(--secondary);
-      margin-bottom: 12px;
-      font-size: 1.4rem;
+    p{
+      line-height:1.8;
+      font-size:1.1rem;
     }
 
-    .card p, .card li {
-      color: var(--text);
-      font-size: 0.95rem;
+    .timeline{
+      position:relative;
+      margin-top:40px;
     }
 
-    ul {
-      list-style: none;
+    .timeline::before{
+      content:"";
+      position:absolute;
+      left:50%;
+      width:4px;
+      height:100%;
+      background:#ffd27f;
+      transform:translateX(-50%);
     }
 
-    ul li::before {
-      content: "▹";
-      color: var(--primary);
-      margin-right: 8px;
+    .timeline-item{
+      width:50%;
+      padding:20px 40px;
+      position:relative;
     }
 
-    footer {
-      text-align: center;
-      padding: 30px 20px;
-      color: var(--muted);
-      font-size: 0.9rem;
+    .timeline-item:nth-child(odd){
+      left:0;
+      text-align:right;
     }
 
-    .tag {
-      display: inline-block;
-      padding: 6px 10px;
-      border-radius: 999px;
-      background: rgba(0,229,255,0.15);
-      color: var(--primary);
-      font-size: 0.8rem;
-      margin: 4px 4px 0 0;
+    .timeline-item:nth-child(even){
+      left:50%;
+    }
+
+    .timeline-item::before{
+      content:"";
+      position:absolute;
+      top:25px;
+      width:20px;
+      height:20px;
+      border-radius:50%;
+      background:#ffd27f;
+    }
+
+    .timeline-item:nth-child(odd)::before{
+      right:-10px;
+    }
+
+    .timeline-item:nth-child(even)::before{
+      left:-10px;
+    }
+
+    footer{
+      text-align:center;
+      padding:30px;
+      background:#13241b;
+      color:#ccc;
+    }
+
+    @keyframes fadeDown{
+      from{
+        opacity:0;
+        transform:translateY(-40px);
+      }
+      to{
+        opacity:1;
+        transform:translateY(0);
+      }
+    }
+
+    @keyframes fadeUp{
+      from{
+        opacity:0;
+        transform:translateY(40px);
+      }
+      to{
+        opacity:1;
+        transform:translateY(0);
+      }
+    }
+
+    @media(max-width:900px){
+
+      header h1{
+        font-size:2.5rem;
+      }
+
+      .timeline::before{
+        left:20px;
+      }
+
+      .timeline-item{
+        width:100%;
+        padding-left:60px;
+        padding-right:20px;
+        text-align:left !important;
+        left:0 !important;
+      }
+
+      .timeline-item::before{
+        left:10px !important;
+      }
     }
   </style>
 </head>
+
 <body>
 
   <header>
-    <h1>Lucas Emanuel</h1>
-    <p>Estudante | Tecnologia | Programação</p>
+    <h1>Raízes Indígenas Bacabalenses</h1>
+    <p>
+      Entre memórias e lembranças, a presença indígena em Bacabal representa
+      resistência, cultura, identidade e história. Este projeto busca valorizar
+      os povos originários e suas contribuições para a formação cultural da região.
+    </p>
   </header>
 
-  <main>
-    <section class="card">
-      <h2>👤 Sobre mim</h2>
+  <section>
+
+    <div class="card">
+      <h2>🌿 A Herança Indígena</h2>
       <p>
-        Sou um estudante interessado em tecnologia, informática e no funcionamento
-        dos computadores e da internet. Gosto de aprender como sistemas funcionam
-        e de criar projetos usando programação.
+        Os povos indígenas fazem parte da construção histórica e cultural do Maranhão.
+        Em Bacabal, suas tradições influenciaram costumes, linguagem, alimentação,
+        conhecimentos sobre a natureza e formas de convivência social.
       </p>
-    </section>
+    </div>
 
-    <section class="card">
-      <h2>💻 Habilidades</h2>
-      <span class="tag">HTML</span>
-      <span class="tag">Lógica de Programação</span>
-      <span class="tag">Redes (básico)</span>
-      <span class="tag">Informática</span>
-    </section>
-
-    <section class="card">
-      <h2>🚀 Interesses</h2>
-      <ul>
-        <li>Desenvolvimento Web</li>
-        <li>Segurança da Informação</li>
-        <li>Redes de Computadores</li>
-        <li>Inteligência Artificial</li>
-      </ul>
-    </section>
-
-    <section class="card">
-      <h2>📚 Objetivos</h2>
+    <div class="card">
+      <h2>🔥 Memórias e Tradições</h2>
       <p>
-        Aprofundar meus conhecimentos em tecnologia, aprender novas linguagens
-        de programação e me preparar para talve entrar em uma carreira na área de TI.
+        As memórias indígenas sobrevivem através das histórias contadas pelas famílias,
+        das manifestações culturais, do artesanato, das danças e da preservação da natureza.
+        Cada lembrança representa a continuidade de uma identidade ancestral.
       </p>
-    </section>
+    </div>
 
-    <section class="card">
-      <h2>🛠️ Projetos</h2>
+    <div class="card">
+      <h2>🪶 Cultura e Identidade</h2>
       <p>
-        Sou fundador do site de minha sala, está disponivel do endereço CTRLTIF.SHOP
+        A cultura indígena está presente na culinária, nas palavras do cotidiano,
+        na medicina natural e no respeito à terra. Reconhecer essas raízes é valorizar
+        a diversidade cultural brasileira.
       </p>
-    </section>
+    </div>
 
-    <section class="card">
-      <h2>🎓 Formação / Estudos</h2>
-      <p>
-        Atualmente estudo de Instituto federeral do Maranhão, sou formado em informatica avançada juntamente com montagem de computadores
-      </p>
-    </section>
+    <div class="card">
+      <h2>⏳ Linha do Tempo</h2>
 
-    <section class="card">
-      <h2>📞 (99)98506-8012</h2>
-      <p>
-        lucenaemanuel@acad.ifma.edu
-      </p>
-    </section>
+      <div class="timeline">
 
-  </main>
+        <div class="timeline-item">
+          <h3>Povos Originários</h3>
+          <p>
+            Presença indígena no território maranhense antes da colonização.
+          </p>
+        </div>
+
+        <div class="timeline-item">
+          <h3>Colonização</h3>
+          <p>
+            Mudanças culturais e conflitos provocados pela chegada dos europeus.
+          </p>
+        </div>
+
+        <div class="timeline-item">
+          <h3>Resistência Cultural</h3>
+          <p>
+            Manutenção de costumes, tradições e saberes ancestrais.
+          </p>
+        </div>
+
+        <div class="timeline-item">
+          <h3>Atualidade</h3>
+          <p>
+            Valorização das raízes indígenas através da educação, cultura e memória.
+          </p>
+        </div>
+
+      </div>
+    </div>
+
+  </section>
 
   <footer>
-    © 2026 • Site pessoal • Tema Tecnologia
+    <p>
+      Projeto Escolar • Raízes Indígenas Bacabalenses • Entre Memórias e Lembranças
+    </p>
   </footer>
 
 </body>
