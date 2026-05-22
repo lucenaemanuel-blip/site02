@@ -27,11 +27,40 @@
       align-items:center;
       text-align:center;
       padding:20px;
+      position:relative;
       background:
         linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)),
-        url('https://images.unsplash.com/photo-1511497584788-876760111969?auto=format&fit=crop&w=1400&q=80');
+        url('https://netocruz.blog.br/wp-content/uploads/2024/11/IMG-20241106-WA0005.jpg');
       background-size:cover;
       background-position:center;
+    }
+
+    /* LOGO IF */
+    .logo-if{
+      position:absolute;
+      top:20px;
+      left:20px;
+      width:110px;
+      z-index:10;
+      transition:0.3s;
+    }
+
+    .logo-if:hover{
+      transform:scale(1.05);
+    }
+
+    /* TURMA */
+    .turma-topo{
+      position:absolute;
+      top:35px;
+      left:150px;
+      background:rgba(0,0,0,0.45);
+      padding:10px 18px;
+      border-radius:12px;
+      font-size:1rem;
+      color:#ffffff;
+      border:1px solid rgba(255,255,255,0.2);
+      backdrop-filter: blur(5px);
     }
 
     header h1{
@@ -156,6 +185,17 @@
 
     @media(max-width:900px){
 
+      .logo-if{
+        width:80px;
+      }
+
+      .turma-topo{
+        left:110px;
+        top:25px;
+        font-size:0.9rem;
+        padding:8px 14px;
+      }
+
       header h1{
         font-size:2.5rem;
       }
@@ -182,12 +222,27 @@
 <body>
 
   <header>
+
+    <!-- LOGO DO IF -->
+    <img 
+      class="logo-if"
+      src="https://www2.ifal.edu.br/acesso-a-sistemas/logo2.png/@@images/7521182e-8704-4536-b6b7-543a00049a9d.png"
+      alt="Logo Instituto Federal"
+    >
+
+    <!-- NOME DA TURMA -->
+    <div class="turma-topo">
+      Turma: Informática 2°
+    </div>
+
     <h1>Raízes Indígenas Bacabalenses</h1>
+
     <p>
       Entre memórias e lembranças, a presença indígena em Bacabal representa
       resistência, cultura, identidade e história. Este projeto busca valorizar
       os povos originários e suas contribuições para a formação cultural da região.
     </p>
+
   </header>
 
   <section>
